@@ -1,10 +1,12 @@
+const dns = require('dns');
+dns.setServers(['8.8.8.8', '1.1.1.1']);
 const moongosse = require('mongoose');
+require('dotenv').config();
 
-const mongourl = 'mongodb://localhost:27017/hotel'
+//const mongourl = 'mongodb://127.0.0.1:27017/hotel'
+const mongoUrl = process.env.DB_URL;
 
-moongosse.connect(mongourl,{
-    
-})
+moongosse.connect(mongoUrl);
 
 const db = moongosse.connection;
 
