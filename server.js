@@ -20,7 +20,7 @@ app.get('/',(req,res) => {
 })
 
 const personroute = require('./routes/personrouter');
-app.use('/person',localauthmiddleware,personroute);
+app.use('/person',personroute);
 
 const menuroute = require('./routes/menurouter');
 app.use('/menu',menuroute);

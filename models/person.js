@@ -17,12 +17,10 @@ const personSchema = new moongosse.Schema({
     mobile: {
         type: String,
         required: true,
-        unique: true
     },
     email: {
         type: String,
         required: true,
-        unique: true
     },
     address: {
         type: String,
